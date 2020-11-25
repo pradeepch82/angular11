@@ -416,6 +416,7 @@ Similar to AngularJS
 Two way data binding(using [(NgModel)] syntax)
 Minimal component code
 Automatic track of the form and its data(handled by Angular)
+
 Unit testing is another challenge
 
 
@@ -423,13 +424,17 @@ Reactive Forms Features
 ===========================================
 More flexible, but needs a lot of practice
 Handles any complex scenarios
+
 No data binding is done (immutable data model preferred by most developers)
+
 More component code and less HTML markup
 Reactive transformations can be made possible such as
 Handling a event based on a debounce time
 Handling events when the components are distinct until changed
 Adding elements dynamically
+
 Easier unit testing
+
 
 
 FormGroup,FormBuilder,Validators => ReactiveFormsModule
@@ -563,22 +568,28 @@ Types of Guards
 
 1.CanActivate:
 	 Controls if a route can be activated.
+
 2.CanActivateChild:
 	 Controls if children of a route can be activated.
+
 3.CanLoad: 
 	Controls if a route can even be loaded. This becomes useful for feature modules
 	that are lazy loaded. They won’t even load if the guard returns false.
+
 4.CanDeactivate: 
 	Controls if the user can leave a route. Note that this guard doesn’t prevent the
 	user from closing the browser tab or navigating to a different address. 
 	It only prevents actions from within the application itself.
 
+
+
+
 @ViewChild
 ===========
 
-    1.To Inject The Component
+1.To Inject The Component
 
-   @ViewChild(NumberComponent,{static:false}) 
+  @ViewChild(NumberComponent,{static:false}) 
   private n:NumberComponent; 
 
 
@@ -599,9 +610,6 @@ Types of Guards
   
 
 
-
-
-
 Angular CRUD Application
 ==========================
  
@@ -617,11 +625,54 @@ In Express app
 
 
 
+
+
+employees=[
+{id:101,name:'Pradeep Chinchole',salary:26000.55,doj:new Date()},
+{id:102,name:'Sachin Tendulkar',salary:12000.44,doj:new Date()},
+{id:103,name:'Rajesh Patil',salary:34567.99,doj:new Date()},
+{id:104,name:'Ankita Nag',salary:34566.77,doj:new Date()},
+{id:105,name:'Smita S',salary:12000.00,doj:new Date()}
+];
+
+
+
+Restful API
+
+https://localhost:3000/employees           GET     => get all employees
+https://localhost:3000/employees/1         GET     => get employee with id 1
+https://localhost:3000/employees/1         DELETE  => delete employee with id 1   
+https://localhost:3000/employees/1         PUT     => update employee with id 1  
+https://localhost:3000/employees/1         POST    => add employee    
+
+
+
+
+
 Angular  Express Integration
 ==============================
 Refer below video
 =====================
 https://www.youtube.com/watch?v=sTbQphoYbK0
+
+
+
+
+
+
+
+
+
+
+To generate production code build
+=================================
+ng build --prod
+
+It will create  dist/angular-demo-app
+
+
+
+
 
 
 
